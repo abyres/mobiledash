@@ -1,20 +1,28 @@
+<!DOCTYPE html>
 <html>
-    <head>Mobile Dashboard
-    </head>
-        <body>
-        <p>Mobile dashboard is a cool app!</p>
-        
-        <script type="text/javascript">
-            var myData = new Array(['Sector 1', 2], ['Sector 2', 1], ['Sector 3', 3], ['Sector 4', 6], ['Sector 5', 8.5], ['Sector 6', 10]);
-            var colors = ['#FACC00', '#FB9900', '#FB6600', '#FB4800', '#CB0A0A', '#F8F933'];
-            var myChart = new JSChart('chartid', 'pie');
-            myChart.setDataArray(myData);
-            myChart.colorizePie(colors);
-            myChart.setTitleColor('#857D7D');
-            myChart.setPieUnitsColor('#9B9B9B');
-            myChart.setPieValuesColor('#6A0000');
-            myChart.draw();
-        </script>
-        
-    </body>
+  <head>
+    <meta charset="UTF-8">
+    <title>Weather</title>
+  </head>
+  <body>
+    <h3>Temperature | Wind</h3>
+    <div id="weather"></div>
+    <p><span id="temp"></span></p>
+    <p><span id="wind"></span></p>
+    <script>
+      var weather = new XMLHttpRequest();
+      weather.open("GET","http://api.wunderground.com/api/e069d13c9432ad2f/conditions/q/CA/Los_angeles.json", false);
+      weather.send(null);
+
+      var r = JSON.parse(weather.response);
+      var dis = "Current Location: " + r.current_observation.display_location.full + "</br>";
+      var temp = r.current_observation.temperature_string + "</br>";
+      var wind = r.current_observation.wind_string + "</br>";
+
+      document.getElementById("temp").innerHTML = temp;  
+      document.getElementById("wind").innerHTML = wind;
+    </script>
+    
+  </body>
 </html>
+      
