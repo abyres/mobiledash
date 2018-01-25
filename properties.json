@@ -1,0 +1,6 @@
+{
+    "categoryProperty": "Month",
+    "valueProperty": "Amount",
+    "chartData":"http://localhost:8000/app/source.json",
+    "chartType" : "Line"
+}

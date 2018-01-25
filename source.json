@@ -1,0 +1,47 @@
+{
+    "categoricalSource": [
+        { "Month": "Jan", 
+          "Amount": 900
+        },
+        { "Month": "Feb", 
+          "Amount": 840
+        },
+        { "Month": "Mar", 
+          "Amount": 1000
+        },
+        { "Month": "Apr", 
+          "Amount": 1300
+        },
+        { "Month": "May", 
+          "Amount": 2000
+        },
+        {
+          "Month": "Jun",
+          "Amount": 500
+        },
+        {
+          "Month": "Jul",
+          "Amount": 840
+        },
+        {
+          "Month": "Aug",
+          "Amount": 1000
+        },
+        {
+          "Month": "Sep",
+          "Amount": 1300
+        },
+        {
+          "Month": "Oct",
+          "Amount": 2000
+        },
+        {
+         "Month": "Nov",
+            "Amount": 1000
+        },
+        {
+          "Month": "Dec",
+          "Amount": 1300
+        }
+    ]
+}

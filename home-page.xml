@@ -1,0 +1,25 @@
+<Page loaded="pageLoaded" class="page" xmlns="http://www.nativescript.org/tns.xsd" xmlns="http://schemas.nativescript.org/tns.xsd">
+
+	<ActionBar title="DASHBOARD" class="action-bar">
+		<NavigationButton text="Menu" android.systemIcon="ic_menu_moreoverflow" tap ="showSideDrawer"/>
+	</ActionBar>
+	
+	<ScrollView>
+		<StackLayout class="home-panel">
+			<GridLayout rows="*" xmlns:chart="nativescript-pro-ui/chart" height="1000px">
+				<chart:RadCartesianChart row="0">
+					<chart:RadCartesianChart.series class="Line">
+						<chart:LineSeries items="{{ categoricalSource }}" categoryProperty="{{ categoryProperty }}" valueProperty="{{ valueProperty }}">
+							<chart:LineSeries.horizontalAxis>
+								<chart:CategoricalAxis/>
+							</chart:LineSeries.horizontalAxis>
+							<chart:LineSeries.verticalAxis>
+								<chart:LinearAxis/>
+							</chart:LineSeries.verticalAxis>
+						</chart:LineSeries>
+					</chart:RadCartesianChart.series>
+				</chart:RadCartesianChart>
+			</GridLayout>
+		</StackLayout>
+	</ScrollView>
+</Page>
